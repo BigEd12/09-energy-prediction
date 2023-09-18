@@ -1,7 +1,7 @@
 
 
 def output_to_txt(err_df, pred_df):
-    file_path = 'testing.txt'
+    file_path = 'output.txt'
 
     with open(file_path, 'a') as file:
         header = 'Regresiones'
@@ -22,4 +22,4 @@ def output_to_txt(err_df, pred_df):
         for row_string in rows_as_strings:
             file.write(row_string + '\n')
             
-    print('File has been successfully saved')
+    print(f'File has been successfully saved as {file_path})
