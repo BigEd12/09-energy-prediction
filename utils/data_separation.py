@@ -16,9 +16,9 @@ def prepare_input_data(file_path):
     df_out['date_time'] = pd.to_datetime(df_out['fecha'] + ' ' + df_out['hora'], format='%Y-%m-%d %H:%M')
     df_out.drop(columns=['predicciones', 'T', 'fecha', 'hora'], inplace=True)
     df_out = df_out[['date_time', 'U', 'V']] 
-    df_out = df_out.astype({'U': 'int', 'V': 'int64'})
+    df_out = df_out.astype({'U': 'int', 'V': 'int'})
     df_out = df_out.sort_values(by='date_time')
-    df_out.reset_index(inplace=True)
+    df_out.reset_index(inplace=True, drop=True)
     
     return df_in, df_out
 

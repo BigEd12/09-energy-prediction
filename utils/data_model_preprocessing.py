@@ -58,3 +58,16 @@ def preprocessing(df):
     west_df = df[df['Direction (sector)'] == 'West']
     
     return north_df, east_df, south_df, west_df
+
+def prepare_data_for_prediction(df):
+    """
+    Input: DataFrame
+    
+    - Run all preprocessing on input data for prediction
+    
+    Output: DataFrame
+    """    
+    df['Speed (m/ps)'] = df.apply(add_wind_speed, axis=1)
+    df['Direction (degrees)'] = df.apply(wind_radians_degrees, axis=1)
+    df['Direction (sector)'] = df.apply(direction_sector, axis=1)
+    return df
