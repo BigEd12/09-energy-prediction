@@ -1,7 +1,7 @@
 import pandas as pd
 
 def prepare_input_data(file_path):
-    df = pd.read_csv('output.txt')
+    df = pd.read_csv(file_path)
     
     index_of_pred = (df == 'predicciones').idxmax().observaciones
     

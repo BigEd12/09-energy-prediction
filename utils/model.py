@@ -62,5 +62,5 @@ def make_prediction(row, models):
 
     X = np.array(speed).reshape(-1, 1)
 
-    y_pred = model.predict(X)[0]
+    y_pred = int(round(model.predict(X)[0], 0))
     return y_pred
