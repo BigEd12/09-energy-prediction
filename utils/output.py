@@ -22,4 +22,4 @@ def output_to_txt(err_df, pred_df):
         for row_string in rows_as_strings:
             file.write(row_string + '\n')
             
-    print(f'File has been successfully saved as {file_path})
+    print(f'File has been successfully saved as {file_path}')
