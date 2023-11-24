@@ -21,7 +21,7 @@ Contains five values separated by a space:
 - Temperature
   
 ## Output
-A txt document split into three sections:
+A txt document, named 'output.txt' split into three sections:
 
 ### Regresions (Regressions)
 This section contains the coefficient and the y-intercept for each sector, rounded to two decimal places
